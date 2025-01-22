@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title> Projekt </title>
+    </head>
+    <body bgcolor="#003399" text="#000000">
+
+        <h1><i> Posty </i></h1>
+        <p>Jest to najprostrzy blog jaki się dało zrobić. Przpraszam za kolor ale miało to wyglądać jak okno erroru windows.<br> Może nie jest najpiękniejszy natomiast nie wiedziałam do jakiego momentu zrobić. </p>
+        {% for post in posts %}
+        <div>
+            <p><b><i>część:</i></b></p>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <p><b><i>opublikowano:</i></b> {{ post.published_date }}</p>
+        </div>
+{% endfor %}
+
+    </body>
+</html>
